@@ -10,7 +10,7 @@ const forecast = (longitude, latitude, callback) => {
 		}else if(body.error){
 			callback(chalk.red.bold('ERROR: ' + body.error.type), undefined)
 		}else{
-			callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out. There is a ' +  body.current.precip + '% chance of rain.')
+			callback(undefined, 'It is currently ' + body.current.weather_descriptions[0] + ' and ' + body.current.temperature + ' degrees out. There is currently a wind speed of ' +  body.current.wind_speed + 'mph.')
 		}
 	})
 }
